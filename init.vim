@@ -64,6 +64,9 @@ Plug 'Shougo/neopairs.vim'
 Plug 'carlitux/deoplete-ternjs'
 Plug 'plytophogy/vim-virtualenv'
 Plug 'godlygeek/tabular'
+Plug 'ekalinin/Dockerfile.vim'
+Plug 'Shougo/neosnippet.vim'
+Plug 'Shougo/neosnippet-snippets'
 
 " Color Schemes
 
@@ -85,6 +88,29 @@ inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 
 "###### deoplete-jedi
 let g:deoplete#sources#jedi#enable_typeinfo = 1
+
+"###### neosnippet
+
+" Plugin key-mappings.
+" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-k>     <Plug>(neosnippet_expand_target)
+
+" SuperTab like snippets behavior.
+" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
+"imap <expr><TAB>
+" \ pumvisible() ? "\<C-n>" :
+" \ neosnippet#expandable_or_jumpable() ?
+" \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+
+" For conceal markers.
+if has('conceal')
+  set conceallevel=2 concealcursor=niv
+endif
+
 
 "###### neopairs
 let g:neopairs#enable = 1
