@@ -67,6 +67,7 @@ Plug 'godlygeek/tabular'
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'Shougo/neosnippet.vim'
 Plug 'Shougo/neosnippet-snippets'
+Plug 'ervandew/supertab'
 
 " Color Schemes
 
@@ -84,7 +85,7 @@ call plug#end()
 let g:deoplete#enable_at_startup = 1
 
 " deoplete tab-complete
-inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+" inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 
 "###### deoplete-jedi
 let g:deoplete#sources#jedi#enable_typeinfo = 1
