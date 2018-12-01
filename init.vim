@@ -130,6 +130,12 @@ let g:NERDTreeIgnore = ['\.pyc$', '__pycache__$']
 
 "###### Startify
 let g:startify_session_persistence = 1
+autocmd VimEnter *
+     \  if !argc() |
+     \ Startify |
+     \ NERDTree |
+     \ wincmd w |
+     \ endif
 
 "###### NERDCommenter
 
