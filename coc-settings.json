@@ -1,0 +1,36 @@
+{
+  "python.formatting.autopep8Args":["--max-line-length=120", "--ignore=E501,E261"],
+  "python.jediEnabled": false,
+  "yaml.schemas": {
+    "https://raw.githubusercontent.com/awslabs/goformation/master/schema/cloudformation.schema.json": "/*"
+  },
+  "yaml.customTags": [
+    "!Ref Scalar",
+    "!Ref Sequence",
+    "!GetAtt Scalar",
+    "!GetAtt Sequence",
+    "!fn",
+    "!fn Sequence",
+    "!And",
+    "!And Sequence",
+    "!If",
+    "!If Sequence",
+    "!Not",
+    "!Not Sequence",
+    "!Equals",
+    "!Equals Sequence",
+    "!Or",
+    "!Or Sequence",
+    "!FindInMap Sequence",
+    "!Base64",
+    "!Cidr",
+    "!Sub Scalar",
+    "!Sub Sequence",
+    "!GetAZs",
+    "!ImportValue",
+    "!Select Sequence",
+    "!Split Sequence",
+    "!Join Sequence"
+  ],
+  "tsserver.npm": "/usr/local/bin/npm"
+}
